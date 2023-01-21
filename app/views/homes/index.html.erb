@@ -1,0 +1,14 @@
+<%= link_to "owner", owners_path %>
+<%= link_to "Create", new_home_path %>
+<br>
+<% @homes.each_with_index do |home,i| %>
+<%= i+1 %>.<%= home.home_name %>
+<%=  home.owner.owner_name %>
+<br>
+<%= link_to "show", home_path(home) %>
+<br>
+<%= link_to "Edit",  edit_home_path(home)%>
+<br>
+<%= link_to "Delete", home_path(home), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }   %>
+<br>
+<% end %>

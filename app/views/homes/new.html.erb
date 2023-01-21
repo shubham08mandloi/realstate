@@ -1,0 +1,6 @@
+<%= form_for @homes, url: homes_path do |f| %>
+<%= f.label :home_name %>
+<%= f.text_field :home_name %>
+<br>
+<%= f.submit :submit %>
+<% end %>

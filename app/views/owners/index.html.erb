@@ -1,0 +1,6 @@
+
+<%= link_to "Create", new_owner_path %>
+<br>
+<% @owners.each_with_index do |owner,i| %>
+<%= i+1 %>.<%= owner.owner_name %>
+<% end %>
